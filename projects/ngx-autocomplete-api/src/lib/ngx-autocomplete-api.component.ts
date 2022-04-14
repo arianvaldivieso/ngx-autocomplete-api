@@ -10,7 +10,7 @@ import { HttpRequestConfig } from '../public-api';
 @Component({
   selector: 'ngx-autocomplete-api',
   template: `
-     <mat-form-field [appearance]="formFieldAppearance">
+     <mat-form-field [appearance]="formFieldAppearance" class="w-100">
     <input type="text"
               [placeholder]="placeholder"
               matInput
@@ -42,7 +42,7 @@ import { HttpRequestConfig } from '../public-api';
 })
 export class NgxAutocompleteApiComponent implements OnInit, OnDestroy {
   @Input() formFieldAppearance: MatFormFieldAppearance = 'standard';
-  @Input() placeholder: boolean;
+  @Input() placeholder: string;
 
   @Input() mapDataFunction: (data: any) => any;
   @Input('httpRequestConfig') config: HttpRequestConfig;
